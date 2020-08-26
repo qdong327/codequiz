@@ -1,4 +1,4 @@
-// list of all questions, choices, and answers
+// list of all questions, choices, and answers (from instructor)
 var questions = [
   {
     title: "Commonly used data types DO NOT include:",
