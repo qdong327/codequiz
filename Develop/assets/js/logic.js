@@ -39,9 +39,10 @@ function createTimer() {
 
   timerId = setInterval(function () {
     timerEl.innerHTML = +timerEl.innerHTML - 1;
-
+    // check if user ran out of time (from instructor)
     if (timerEl.innerHTML < 1) {
       stopTimer(timerId);
+      quizEnd();
     }
   }, 1000);
 }
@@ -72,8 +73,13 @@ function startQuiz() {
 }
 // Penalize function
 function penalizeTime() {
-  //   // display new time on page (from instructor)
-  timerEl.innerHTML = timerEl.innerHTML - 10
+  if (timerEl.innerHTML <= 10) {
+    // check if user ran out of time (from instructor)
+    quizEnd();
+  }
+  else {
+    timerEl.innerHTML = timerEl.innerHTML - 10
+  }
   // if time, add in flash of red background color when penalized
 }
 function displayQuestion() {
@@ -119,7 +125,7 @@ function checkAnswer() {
     penalizeTime();
     //   // play "wrong" sound effect (from instructor)
     sfxWrong.play();
-    feedbackEl.innerHTML = "Nope!"
+    feedbackEl.innerHTML = "Nope! Try again."
     feedbackEl.classList.remove("hide");
     setTimeout(removeFeedback, 750)
   }
@@ -162,7 +168,7 @@ function quizEnd() {
 function clockTick() {
   // update time (from instructor)
 
-  // check if user ran out of time (from instructor)
+
 }
 
 function saveHighscore() {
@@ -174,26 +180,39 @@ function saveHighscore() {
   console.log(userScore);
 
   // get saved scores from localstorage, or if not any, set to empty array (from instructor)
-var scoreArray = [];
-  // localStorage.getItem();
-  // localStorage.setItem(userInitials, "something")
+  var addToScoreBoard;
+  //if highscores exists in local storage, get it from local storage
+  if (userInitials !== "") {
+    var highScores = JSON.parse(window.localStorage.getItem("highScores")) || [];
+    addToScoreBoard = {
+      score: userScore,
+      initials: userInitials
+    };
+    console.log(addToScoreBoard);
+    // $(#highscores)
+    // localStorage.getItem();
+    highScores.push(addToScoreBoard);
+    highScores = window.localStorage.setItem("highScores", JSON.stringify(highScores));
+  }
 
   // format new score object for current user (from instructor)
 
-  // save to localstorage (from instructor)
 
   // redirect to next page (from instructor)
-
+  window.location.href = "highscores.html";
 }
 
-function checkForEnter(event) {
-  // check if event key is enter (from instructor)
-  // saveHighscore (from instructor)
-}
+// function checkForEnter(e) {
+//   // check if event key is enter (from instructor)
+//   // saveHighscore (from instructor)
+//   saveHighscore();
+// }
 
 // user clicks button to submit initials (from instructor)
 submitBtn.onclick = saveHighscore;
 
 // user clicks button to start quiz (from instructor)
 startBtn.addEventListener('click', startQuiz);
-initialsEl.onkeyup = checkForEnter;
+
+// check for enter call
+// initialsEl.onkeydown = checkForEnter;
