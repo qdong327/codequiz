@@ -14,7 +14,7 @@ a:hover {
 }
 
 button {
-  display: inline-block;
+  display: in-block;
   margin: 5px;
   cursor: pointer;
   font-size: 100%;
@@ -30,8 +30,12 @@ button:hover {
   background-color: #8570a5;
 }
 
+#choices {
+  display: block;
+}
 .choices button {
   display: block;
+  margin: 100px;
 }
 
 input[type="text"] {
