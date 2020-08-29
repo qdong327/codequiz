@@ -35,7 +35,6 @@ button:hover {
 }
 .choices button {
   display: block;
-  margin: 100px;
 }
 
 input[type="text"] {
