@@ -15,7 +15,7 @@
 ![Screenshot](docs/assets/screenshots/wronganswer.png)
 
 ### Here is the highscores display at the end of the quiz that logs the leftover time.
-![Screenshot](docs/assets/screenshots/scores.png)
+![Screenshot](docs/assets/screenshots/scoring.png)
 
 ### Note to Regrader:
 -Fixed the penalty of 10 seconds to 15 seconds
