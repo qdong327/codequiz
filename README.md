@@ -4,7 +4,6 @@
 
 
 * Link to Functioning App: https://qudoki.github.io/codequiz/
-
 * Link to Repo: https://github.com/qudoki/codequiz
 
 
@@ -18,6 +17,6 @@
 ![Screenshot](docs/assets/screenshots/scoring.png)
 
 ### Note to Regrader:
--Fixed the penalty of 10 seconds to 15 seconds
--Previously had user keep on question until answered correctly. Upon revisiting instructions, revised to add displayNextQuestion function call to wrong answer if/else statement
--Completed ReadMe
+* Fixed the penalty of 10 seconds to 15 seconds
+* Previously had user keep on question until answered correctly. Upon revisiting instructions, revised to add displayNextQuestion function call to wrong answer if/else statement
+* Completed ReadMe
