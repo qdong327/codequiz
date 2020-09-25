@@ -3,8 +3,9 @@
 ## Using Javascript, HTML, and CSS, this is a code quiz using timers, scoring, and special effects.
 
 
-*Link to Functioning App: https://qudoki.github.io/codequiz/
-*Link to Repo: https://github.com/qudoki/codequiz
+* Link to Functioning App: https://qudoki.github.io/codequiz/
+
+* Link to Repo: https://github.com/qudoki/codequiz
 
 
 ### Here is the functioning quiz in the first question.
