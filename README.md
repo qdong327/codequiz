@@ -3,18 +3,18 @@
 ## Using Javascript, HTML, and CSS, this is a code quiz using timers, scoring, and special effects.
 
 
--Link to Functioning App: https://qudoki.github.io/codequiz/
--Link to Repo: https://github.com/qudoki/codequiz
+*Link to Functioning App: https://qudoki.github.io/codequiz/
+*Link to Repo: https://github.com/qudoki/codequiz
 
 
 ### Here is the functioning quiz in the first question.
-![Screenshot](assets/screenshots/start.png)
+![Screenshot](docs/assets/screenshots/start.png)
 
 ### Here is the displayed wrong answer text that shows upon answering incorrectly.
-![Screenshot](assets/screenshots/wronganswer.png)
+![Screenshot](docs/assets/screenshots/wronganswer.png)
 
 ### Here is the highscores display at the end of the quiz that logs the leftover time.
-![Screenshot](assets/screenshots/scores.png)
+![Screenshot](docs/assets/screenshots/scores.png)
 
 ### Note to Regrader:
 -Fixed the penalty of 10 seconds to 15 seconds
