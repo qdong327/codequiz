@@ -2,6 +2,7 @@
 
 // variables to keep track of quiz state (from instructor)
 var currentQuestionIndex = 0;
+// var startingTime = 5;
 var startingTime = questions.length * 15;
 var currentQuestion = questions[currentQuestionIndex];
 var currentTime = startingTime;
@@ -71,7 +72,7 @@ function penalizeTime() {
     quizEnd();
   }
   else {
-    timerEl.innerHTML = timerEl.innerHTML - 10
+    timerEl.innerHTML = timerEl.innerHTML - 15
   }
   // if time, add in flash of red background color when penalized
 }
@@ -103,22 +104,23 @@ function removeFeedback() {
 function checkAnswer() {
   var userSelection = this.innerHTML[0] - 1;
   if (currentQuestion.choices[parseInt(userSelection)] == currentQuestion.answer) {
-    //   // play "right" sound effect (from instructor)
+    // play "right" sound effect (from instructor)
     sfxRight.play();
     feedbackEl.innerHTML = "Correct!"
     feedbackEl.classList.remove("hide");
     setTimeout(removeFeedback, 750)
     getNextQuestion();
   }
-  //   // else  (from instructor)
+  // else  (from instructor)
   else {
-    //   // penalize time (from instructor)
+    // penalize time (from instructor)
     penalizeTime();
-    //   // play "wrong" sound effect (from instructor)
+    // play "wrong" sound effect (from instructor)
     sfxWrong.play();
     feedbackEl.innerHTML = "Nope! Try again."
     feedbackEl.classList.remove("hide");
     setTimeout(removeFeedback, 750)
+    getNextQuestion();
   }
 }
 // move to next question (from instructor)
