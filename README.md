@@ -20,3 +20,13 @@
 * Fixed the penalty of 10 seconds to 15 seconds
 * Previously had user keep on question until answered correctly. Upon revisiting instructions, revised to add displayNextQuestion function call to wrong answer if/else statement
 * Completed ReadMe
+
+
+# Title
+
+## Description 1-2 sentences
+## Deployed Application:
+## Technologies Used
+## Screenshots (2-3)
+## License (MIT) - add in Github to each
+## Collaborators with contact, or Github if applicable.
