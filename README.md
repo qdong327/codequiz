@@ -32,4 +32,4 @@ Here is the highscores display at the end of the quiz that logs the leftover tim
 * Completed ReadMe
 
 ### License
-* [Link to License](./assets/LICENSE.md)
+* [Link to License](assets/LICENSE.md)
